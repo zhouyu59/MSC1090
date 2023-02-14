@@ -1,0 +1,50 @@
+Assignment 8
+Completion requirements
+Opened: Thursday, 10 November 2022, 10:00 AM
+Due: Thursday, 17 November 2022, 11:59 PM
+Due date: Thursday, November 17th at midnight.
+
+Be sure to use version control ("git"), as you develop your code. Do "git add ...., git commit" repeatedly as you add and edit your code. You will hand in the output of "git log" for your assignment repository as part of the assignment.
+
+For this assignment we would like to learn a little bit about your research and field of study. To do so, we invite you to use a representative set of data from your research. It doesn't need to be unpublished or new data, just something that is representative of the actual data you, or your lab, deal with in your research. If you don't have any data available, you can still use other data that is close to your interests, either from the R data sets or from other websites, like Open Data Toronto, or the UCI Machine Learning Repository. If you use an R data set, do not use any of those we have been presenting and discussing in class!
+
+The goal of this assignment is to apply the tools and techniques we have been discussing in the course to your data.
+
+Mandatory points:
+
+you must create a git-repository
+you must have at least two modules: a main driver script and a utilities file where the functions used in the main driver are defined.
+the driver script should at least take one command line argument, the filename which contains the data.  If you use an R data set, dump the data to a file so that you have a file to load.
+defensive programming for the command line argument(s)
+the functions should take arguments and, if required, return values.
+you must have a function for loading the data you will be using.
+functions can not access variables that are not passed to them!
+you must perform at least four statistical or model-fitting techniques on the data, each one in its own function. The function should report the results of the particular analysis:
+probability/statistical estimators computations
+model fitting
+statistical hypothesis testing
+statistical power analysis
+classification model
+. . .
+Additionally:
+
+you are welcome to include other statistical methods or machine learning algorithms that we haven't discussed in class, but will need to briefly explain them and why you are using them.
+you may also include shell scripting, in case you need to handle several files.
+you may re-use no more than two types of analysis from previous assignments.
+You must submit:
+
+the git log for the repository you created,
+any data files used in the analysis (if you are unable to give us the data, due to privacy issues, email us!),
+your main driver and utilities file,
+a short report, in PDF format, including the following sections:
+Introduction: briefly introduce your field of research, describe the data you are using and the goal of your analysis.
+Methods: describe the statistical methods and machine learning algorithms you implemented to analyze your data. If you are using a method not discussed in class, please provide a short description and justification of why are you chose this method.
+Implementation: describe how you implemented the methods discussed in the previous section.
+Results: present the results you obtained, interpreting and discussing the actual numerical values in the context of the data. If you have figures please add them here; include a brief description and discussion of the figures as well.
+Discussion: Explain what advantages or disadvantages you found by implementing this analysis in R. We are particularly interested in comparisons to other analysis tools such as Excel, SPSS, STATA, SAS, G*Power, etc., especially if you use those tools in your lab.
+References: Include here, references (if any) for either citing your data and/or statistical methods.
+Submit your main driver script, utilities file, data files, your report in PDF format, and the output of "git log" from your assignment repository.
+
+To capture the output of 'git log' use redirection, git log > git.log, and hand in the "git.log" file.
+
+Assignments will be graded on a 10 point basis.  Due date is November 17th 2022 (midnight), with 0.5 penalty point per day off for late submission until the cut-off date of November 24th, 2022, at 9:00am.
