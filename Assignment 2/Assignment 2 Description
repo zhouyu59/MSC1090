@@ -1,0 +1,49 @@
+Assignment 2
+Completion requirements
+Opened: Thursday, 22 September 2022, 10:00 AM
+Due: Thursday, 29 September 2022, 11:59 PM
+Create a file named phone_book.R and write a comment containing your name, your SciNet user name and a short description of what this script is doing. For example:
+
+# Name: Alexey Fedoseev
+# SciNet username: alexey
+# Description: 
+#   script prints phone book contacts filtered out by the specified province
+  
+Add the following lines to this file:
+
+names <- c("Alice", "John", "Mike", "Erik", "Frank", "Charlotte")
+phone.numbers <- c("416-123-4567", "647-254-3647", "519-254-6534", "416-864-3425", "416-463-3425", "514-635-2462")
+cities <- c("Toronto", "Mississauga", "Waterloo", "Toronto", "Oakville", "Montreal")
+provinces <- c("ON", "ON", "ON", "ON", "ON", "QC")    
+Following the example in the class use the vectors names, phone.numbers, cities and provinces to create a data frame named phone.book.
+
+Use the command colnames to rename the columns of the data frame phone.book into "Name", "Phone", "City" and "Province" correspondingly.
+
+Create a variable search.province and assign it the value "ON".
+
+Part 1: Using the defined variable search.province perform conditional slicing of the data frame phone.book to find which contacts live in Ontario (ON). Assign the result to a variable province.contacts and display it on the screen.
+
+In order to display a data frame use the print command:
+
+print(province.contacts)
+
+Part 2: Using the command nrow (this command calculates the number of rows in a dataframe) provide an output showing how many contacts are living outside of the Greater Toronto Area, i.e. those who do not live in Toronto, Oakville and Mississauga (it is sufficient to check against these cities in the GTA).
+
+Your final script phone_book.R should display the following information when run in the terminal:
+user@scinet assignment2 $ Rscript phone_book.R
+ON contacts:
+-----------------------------------------
+   Name        Phone        City Province
+1 Alice 416-123-4567     Toronto       ON
+2  John 647-254-3647 Mississauga       ON
+3  Mike 519-254-6534    Waterloo       ON
+4  Erik 416-864-3425     Toronto       ON
+5 Frank 416-463-3425    Oakville       ON
+-----------------------------------------
+Total number of contacts living outside of the Greater Toronto Area is 2
+Submit your script phone_book.R.
+
+Assignments will be graded on a 10 point basis.
+
+Due date is September 29, 2022 at 11:59 p.m., with 0.5 point penalty per day for late submission until the cut-off date of October 6, 2022 at 9:00 a.m.
+
