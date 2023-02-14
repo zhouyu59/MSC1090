@@ -1,0 +1,296 @@
+
+R version 3.5.1 (2018-07-02) -- "Feather Spray"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin15.6.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[R.app GUI 1.70 (7543) x86_64-apple-darwin15.6.0]
+
+[History restored from /Users/yuchenzhou/.Rapp.history]
+
+2022-10-13 18:28:31.716 R[47541:151101] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x7f999a768d70>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-10-13 18:28:31.717 R[47541:151101] Warning: Expected min height of view: (<NSButton: 0x7f999f58db10>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-10-13 18:28:31.720 R[47541:151101] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x7f999f58e330>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-10-13 18:28:31.721 R[47541:151101] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x7f999f5a3a00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-10-13 18:28:33.143 R[47541:151101] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x7f999c0cb420>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+> source("Circle.Utilities.R")
+> diffs <- sim.null.hypo(5, 10000)
+> cumulative.dist <- calc.cdf(diffs)
+1.5 1.6 1.7 1.8 1.9 2 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3 3.1 3.2 3.3 3.4 3.5 3.6 3.7 3.8 3.9 4 4.1 4.2 4.3 4.4 4.5 4.6 4.7 4.8 4.9 5 5.1 5.2 5.3 5.4 5.5 5.6 5.7 5.8 5.9 6 6.1 6.21e-04 2e-04 6e-04 0.0016 0.0035 0.0057 0.0099 0.0164 0.0246 0.0342 0.0451 0.0604 0.074 0.091 0.1112 0.134 0.1576 0.1834 0.2127 0.2441 0.2788 0.3143 0.3526 0.3972 0.4427 0.4856 0.5283 0.5767 0.6241 0.6698 0.7113 0.754 0.7966 0.8339 0.8633 0.891 0.9182 0.9386 0.9559 0.9696 0.9776 0.9861 0.992 0.9965 0.9985 0.9995 0.9999 1
+> plot(cumulative.dist$breaks, cumulative.dist$Cumulative.data)
+> source("Circle.Utilities.R")
+> diffs <- sim.null.hypo(5, 10000)
+> cumulative.dist <- calc.cdf(diffs)
+Error in cdf.dataframe() : could not find function "cdf.dataframe"
+> source("Circle.Utilities.R")
+> 
+> diffs <- sim.null.hypo(5, 10000)
+> cumulative.dist <- calc.cdf(diffs)
+> cumulative.dist
+   breaks Cumulative.Data
+1     1.5          0.0001
+2     1.6          0.0002
+3     1.7          0.0006
+4     1.8          0.0015
+5     1.9          0.0034
+6     2.0          0.0062
+7     2.1          0.0099
+8     2.2          0.0164
+9     2.3          0.0238
+10    2.4          0.0334
+11    2.5          0.0463
+12    2.6          0.0601
+13    2.7          0.0762
+14    2.8          0.0930
+15    2.9          0.1117
+16    3.0          0.1290
+17    3.1          0.1556
+18    3.2          0.1851
+19    3.3          0.2147
+20    3.4          0.2471
+21    3.5          0.2814
+22    3.6          0.3211
+23    3.7          0.3586
+24    3.8          0.3989
+25    3.9          0.4417
+26    4.0          0.4859
+27    4.1          0.5328
+28    4.2          0.5803
+29    4.3          0.6261
+30    4.4          0.6723
+31    4.5          0.7155
+32    4.6          0.7557
+33    4.7          0.7919
+34    4.8          0.8248
+35    4.9          0.8569
+36    5.0          0.8900
+37    5.1          0.9137
+38    5.2          0.9377
+39    5.3          0.9547
+40    5.4          0.9718
+41    5.5          0.9829
+42    5.6          0.9911
+43    5.7          0.9948
+44    5.8          0.9974
+45    5.9          0.9988
+46    6.0          0.9997
+47    6.1          1.0000
+> source("Circle.Utilities.R")
+> 
+> diffs <- sim.null.hypo(5, 10000)
+> cumulative.dist <- calc.cdf(diffs)
+>  plot(cumulative.dist$breaks, cumulative.dist$Cumulative.data)
+> source("Circle.Utilities.R")
+> diffs <- sim.null.hypo(5, 10000)
+> cumulative.dist <- calc.cdf(diffs)
+Warning message:
+In hist.default(n, plot = FALSE, breaks = 40, freq = FALSE) :
+  argument ‘freq’ is not made use of
+> source("Circle.Utilities.R")
+> diffs <- sim.null.hypo(5, 10000)
+> cumulative.dist <- calc.cdf(diffs)
+Warning message:
+In hist.default(n, plot = FALSE, breaks = 41, freq = FALSE) :
+  argument ‘freq’ is not made use of
+> source("Circle.Utilities.R")
+> diffs <- sim.null.hypo(5, 10000)
+> cumulative.dist <- calc.cdf(diffs)
+Warning message:
+In hist.default(n, , freq = FALSE, plot = FALSE, breaks = 41) :
+  argument ‘freq’ is not made use of
+> source("Circle.Utilities.R")
+> diffs <- sim.null.hypo(5, 10000)
+> cumulative.dist <- calc.cdf(diffs)
+> 
+> plot(cumulative.dist$breaks, cumulative.dist$Cumulative.data)
+> source("Circle.Utilities.R")
+> diffs <- sim.null.hypo(5, 10000)
+> cumulative.dist <- calc.cdf(diffs)
+> hist(diffs, breaks = 21, freq = FALSE)
+> plot(cumulative.dist$breaks, cumulative.dist$Cumulative.data)
+> 
+2022-10-13 20:55:13.481 R[47541:151101] *** RController: caught ObjC exception while processing system events. Update to the latest GUI version and consider reporting this properly (see FAQ) if it persists and is not known. 
+*** reason: *** -[__NSArrayM objectAtIndex:]: index 18446744073709551615 beyond bounds [0 .. 74]
+*** name: NSRangeException, info: (null)
+*** Version: R 3.5.1 (74947) R.app R 3.5.1 GUI 1.70 El Capitan build
+Consider saving your work soon in case this develops into a problem.
+> source("Circle.Utilities.R")
+> 
+> diffs <- sim.null.hypo(5, 10000)
+> cumulative.dist <- calc.cdf(diffs)
+> calc.cumulative(cumulative.dist, 4.7)
+Error in `[.data.frame`(binvalue.lessandequal, binvalue.lessandequal$breaks ==  : 
+  undefined columns selected
+> source("Circle.Utilities.R")
+> diffs <- sim.null.hypo(5, 10000)
+> cumulative.dist <- calc.cdf(diffs)
+> calc.cumulative(cumulative.dist, 4.7)
+[1] 0.9809
+> cumulative.dist
+   breaks Cumulative.data
+1     1.5          0.0011
+2     1.6          0.0053
+3     1.7          0.0151
+4     1.8          0.0320
+5     1.9          0.0572
+6     2.0          0.0950
+7     2.1          0.1400
+8     2.2          0.1908
+9     2.3          0.2456
+10    2.4          0.3006
+11    2.5          0.3612
+12    2.6          0.4220
+13    2.7          0.4793
+14    2.8          0.5353
+15    2.9          0.5848
+16    3.0          0.6295
+17    3.1          0.6724
+18    3.2          0.7162
+19    3.3          0.7517
+20    3.4          0.7853
+21    3.5          0.8141
+22    3.6          0.8397
+23    3.7          0.8639
+24    3.8          0.8839
+25    3.9          0.9060
+26    4.0          0.9214
+27    4.1          0.9335
+28    4.2          0.9456
+29    4.3          0.9572
+30    4.4          0.9659
+31    4.5          0.9724
+32    4.6          0.9772
+33    4.7          0.9809
+34    4.8          0.9848
+35    4.9          0.9885
+36    5.0          0.9914
+37    5.1          0.9941
+38    5.2          0.9953
+39    5.3          0.9967
+40    5.4          0.9979
+41    5.5          0.9991
+42    5.6          0.9995
+43    5.7          0.9997
+44    5.8          0.9999
+45    5.9          0.9999
+46    6.0          1.0000
+> source("Circle.Utilities.R")
+> diffs <- sim.null.hypo(5, 10000)
+> cumulative.dist <- calc.cdf(diffs)
+> calc.cumulative(cumulative.dist, 4.7)
+[1] 0.973
+> cumulative.dist
+   breaks Cumulative.data
+1     1.4          0.0003
+2     1.5          0.0010
+3     1.6          0.0056
+4     1.7          0.0135
+5     1.8          0.0319
+6     1.9          0.0597
+7     2.0          0.0942
+8     2.1          0.1385
+9     2.2          0.1879
+10    2.3          0.2394
+11    2.4          0.2976
+12    2.5          0.3587
+13    2.6          0.4166
+14    2.7          0.4738
+15    2.8          0.5294
+16    2.9          0.5816
+17    3.0          0.6299
+18    3.1          0.6713
+19    3.2          0.7100
+20    3.3          0.7479
+21    3.4          0.7803
+22    3.5          0.8095
+23    3.6          0.8365
+24    3.7          0.8584
+25    3.8          0.8768
+26    3.9          0.8963
+27    4.0          0.9110
+28    4.1          0.9250
+29    4.2          0.9384
+30    4.3          0.9479
+31    4.4          0.9569
+32    4.5          0.9650
+33    4.6          0.9730
+34    4.7          0.9794
+35    4.8          0.9841
+36    4.9          0.9885
+37    5.0          0.9919
+38    5.1          0.9940
+39    5.2          0.9958
+40    5.3          0.9979
+41    5.4          0.9982
+42    5.5          0.9988
+43    5.6          0.9992
+44    5.7          0.9998
+45    5.8          1.0000
+> source("Circle.Utilities.R")
+> diffs <- sim.null.hypo(5, 10000)
+> cumulative.dist <- calc.cdf(diffs)
+> 
+> calc.cumulative(cumulative.dist, 4.7)
+[1] 0.9779
+> cumulative.dist
+   breaks Cumulative.data
+1     1.4          0.0001
+2     1.5          0.0018
+3     1.6          0.0069
+4     1.7          0.0163
+5     1.8          0.0314
+6     1.9          0.0567
+7     2.0          0.0935
+8     2.1          0.1372
+9     2.2          0.1872
+10    2.3          0.2445
+11    2.4          0.3030
+12    2.5          0.3590
+13    2.6          0.4173
+14    2.7          0.4738
+15    2.8          0.5318
+16    2.9          0.5807
+17    3.0          0.6257
+18    3.1          0.6672
+19    3.2          0.7099
+20    3.3          0.7466
+21    3.4          0.7771
+22    3.5          0.8058
+23    3.6          0.8310
+24    3.7          0.8563
+25    3.8          0.8780
+26    3.9          0.8956
+27    4.0          0.9109
+28    4.1          0.9247
+29    4.2          0.9358
+30    4.3          0.9456
+31    4.4          0.9568
+32    4.5          0.9653
+33    4.6          0.9721
+34    4.7          0.9779
+35    4.8          0.9829
+36    4.9          0.9870
+37    5.0          0.9900
+38    5.1          0.9922
+39    5.2          0.9945
+40    5.3          0.9961
+41    5.4          0.9978
+42    5.5          0.9991
+43    5.6          0.9993
+44    5.7          0.9997
+45    5.8          0.9999
+46    5.9          1.0000
+> 

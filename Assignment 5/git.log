@@ -1,0 +1,71 @@
+commit c0196fde444789caa9c93d6a30dc83d234e55efc
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Oct 13 22:32:44 2022 -0400
+
+    comment test.bird.data.R
+
+commit 47849008f62aed608afbc2f6e9aac6f88c7f8aad
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Oct 13 22:29:29 2022 -0400
+
+    generate data from triangular distribution and perform t test between our data and null hypothesis data
+
+commit d5a36af1ba8cf34689c74fe95e323bdc18d18042
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Oct 13 21:34:01 2022 -0400
+
+    use defensive programming around test.bird.data.R command line arguments
+
+commit 60b556b69142a7cf4aafb4400f8dbcdba3518700
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Oct 13 21:10:54 2022 -0400
+
+    create the second R script test.bird.data.R
+
+commit 7abebef1a0b5588e2754091b734ff5c3fd19a819
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Oct 13 21:08:16 2022 -0400
+
+    comment the function calc.cumulative
+
+commit 87b7dfda5bb33bac2b4548a7af40aaa719e994ec
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Oct 13 21:03:29 2022 -0400
+
+    write a function, calc.cumulative which determine which bin the single value is in and return the value of the cumulative distribution function for that bin
+
+commit 85fd752afb9c43ddbf5bc83f09960755e912420a
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Oct 13 20:26:17 2022 -0400
+
+    comment the two functions, sim.null.hypo and calc.cdf
+
+commit 73e7cf5ee3cd61429095b9bef0b846712479d5f3
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Oct 13 19:04:41 2022 -0400
+
+    write a function, called calc.cdf, which calculates the cumulative distribution function for the distribution which represents this data
+
+commit 71dc5914c0b43d472495daa37bdac1bce249eafb
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Oct 13 13:09:07 2022 -0400
+
+    write function sim.null.hypo to return multiple maximum agular difference from different samplings
+
+commit 910ee5e1db6d93c0aa199147daf812a0bf23f616
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Oct 13 12:30:06 2022 -0400
+
+    write comments for the function, max.angular.diff
+
+commit 3cddbbb7b2b0ab273b1c307ea3f40fd33ed14f78
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Oct 13 12:25:53 2022 -0400
+
+    edit the code to fix an error so a vector is used to store the difference between sequential angles
+
+commit 1d60df5f3e6ab567f0398cf2f59b2ac0e6b6b3a1
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Oct 13 12:18:57 2022 -0400
+
+    create Circle.Utilities.R and write a function, max.angular.diff, which returns the maximum difference between sequential angles
