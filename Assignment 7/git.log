@@ -1,0 +1,59 @@
+commit b2ab65ec03d053a9da7f7449511fae992c27a2b3
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Mon Nov 7 11:33:15 2022 -0500
+
+    change parameters in driverscript.R and comment
+
+commit 1e966bafd9549c546c96484fec79c7238ae25983
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Mon Nov 7 11:23:10 2022 -0500
+
+    fix the issues of NewUtilities.R and comment function
+
+commit 6a308fe3a75d4a24bf7a7ced9b9f7ab380248c71
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Nov 3 20:07:50 2022 -0400
+
+    finish writing running script so it can output a plot with confidence interval
+
+commit 1befb8dbcbc621c74666d6ae53197263ef2b15ba
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Nov 3 19:49:33 2022 -0400
+
+    fix the previous issues about bca confidence interval
+
+commit a7f4f27dba8ade112b033b2cc996307ee8ba8bca
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Nov 3 17:34:57 2022 -0400
+
+    create driver script and code defensive mechanisms
+
+commit 9bdd18fdcf53a2081826f0de23a6599172e091be
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Nov 3 17:27:06 2022 -0400
+
+    code a function called boot.sim which use simulated data to perform bootstraping and return test statistics and confidence intervals
+
+commit 0afb9f3e837bf65284f4fceca1c1ce234dcecf71
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Nov 3 15:28:19 2022 -0400
+
+    code a function called nopara.boot which perform nonparametric bootstrapping n times and calculate the most probable value
+
+commit f584225c71daa9331e832ed3dedc4ef7a34c927f
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Nov 3 11:32:56 2022 -0400
+
+    code function most.probable.value which gives the most probably value from a vector of numeric values
+
+commit c72571d36e0e61beb57ec5e9c76a4189a902d723
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Nov 3 10:58:29 2022 -0400
+
+    create a new utility file
+
+commit 0bfd33a4f541e3786273cf6d8e7fd3702917cc61
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Nov 3 10:48:51 2022 -0400
+
+    move Circle.Utilities.R into assignment7 directory
