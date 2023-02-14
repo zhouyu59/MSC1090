@@ -1,0 +1,63 @@
+Assignment 1
+Completion requirements
+Opened: Thursday, 15 September 2022, 10:00 AM
+Due: Thursday, 22 September 2022, 11:59 PM
+Due date: Thursday, September 22th at 11:59 pm. 
+
+Please note that all of the commands and techniques you need to solve this assignment were given in class.  No internet searches should be necessary to complete this assignment.  If you aren't sure where to start, review the class slides.
+
+The purpose of this assignment is to practise your bash scripting skills on a real data set. Before you begin, be sure to create a new directory to hold your assignment, and move into that directory:
+
+[ejspence.mycomp] pwd
+/c/Users/ejspence/MSC1090 
+[ejspence.mycomp]
+[ejspence.mycomp] mkdir assignment1
+[ejspence.mycomp] cd assignment1
+[ejspence.mycomp] pwd
+/c/Users/ejspence/MSC1090/assignment1
+[ejspence.mycomp]
+
+Consider the following data set, which lists the occurrences of protein cluster 413959 in various eukaryotes: https://www.ncbi.nlm.nih.gov/proteinclusters/413959. This protein cluster is associated with the conversion of glycerol and ADP to glycerol-3-phosphate and ADP.
+
+To make this dataset available for examination, we now introduce a new bash command, "curl". This command will download a file from the internet.
+
+[ejspence.mycomp] pwd
+/c/Users/ejspence/MSC1090/assignment1 
+[ejspence.mycomp]
+[ejspence.mycomp] curl -O https://pages.scinet.utoronto.ca/~ejspence/proteincluster_413959.csv
+[ejspence.mycomp]
+[ejspence.mycomp] ls
+proteincluster_413959.csv
+[ejspence.mycomp]
+
+The data is now ready to be analyzed.
+
+If you look into the data file (try the 'less' command, and type 'q' to get out), you'll notice that the file is a simple CSV (Comma Separated Value) file, with 5 columns. Examine the column headers and familiarize yourself with the types of entries in the columns.
+
+Using this information, write a shell script, called acinetobacter.sh, which
+
+takes a filename as an argument,
+prints out the name of the input file,
+prints out the number of "Acinetobacter" entries listed in the file,
+prints out the number of "Acinetobacter" entries listed in the file which have an accession code containing the string "WP_005", and
+prints out the accession code of the "Acinetobacter" entry with the largest taxid.  Note that you will need to specify the "field separator" when you use the 'sort' command, to specify the symbol that separates the columns.  Read the man page for 'sort' to determine how to do this.  Because all of the accession codes have the same number of characters you may hard-code the number of characters when you call 'cut'.
+The script will be sourced from the command line, and should output as follows:
+
+[ejspence.mycomp]
+[ejspence.mycomp] source acinetobacter.sh proteincluster_413959.csv
+Working with data file proteincluster_413959.csv.
+The total number of Acinetobacter entries is 111.
+The number of Acinetobacter entries with an accession code containing WP_005 is 31.
+The accession code for the Acinetobacter entry with the largest taxid is WP_004651070.1.
+[ejspence.mycomp]
+
+ Some points to consider:
+
+Full points will be awarded for implementations which store the calculated values, such as the number of Acinetobacter entries, in local variables, before printing the output.
+Similarly, full points will be awarded for solutions which do not use "grep -c". The "grep" command may be used, just without the "-c" flag.
+Do not "hard code" the answers. This means you should not have the numbers 111 and 31, nor the string "proteincluster_413959.csv", anywhere in your script.
+Mac users may find that there is extra white space around the numbers in their output sentences.  Do not worry about this white space.  Extra spaces within the sentences are not important.
+Submit your acinetobacter.sh script.
+
+Assignments will be graded on a 10 points basis.
+Due date is September 22, 2022 at 11:59pm, with 0.5 point penalty per day for late submission until the cut-off date of September 29, 2022 at 9:00am.
