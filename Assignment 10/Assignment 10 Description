@@ -1,0 +1,69 @@
+Assignment 10
+Completion requirements
+Opened: Thursday, 24 November 2022, 10:00 AM
+Due: Thursday, 1 December 2022, 11:59 PM
+Be sure to use version control ("git"), as you develop your code. Do "git add ...., git commit" repeatedly as you add and edit your code. You will hand in the output of "git log" for your assignment repository as part of the assignment.
+
+Create a utilities file, called ClassificationUtilities.R. In this file create the following functionality:
+
+1a) Create a function, which takes a filename, or URL or file name (a string), as an argument. The function should download the file at the URL and create a stratified split of the data into training and testing data sets. It should then return these training and testing data sets. You may assume that the name of the column which contains the label data is "label".
+
+1b) Create a function, which takes 2 mandatory arguments. The first mandatory argument is the training data set. The second mandatory argument is a string, which will be used to determine what kind of classification model to create.
+
+The function will examine the second argument to determine what kind of classification model to create. If the second argument is
+
+"DT" the function will build a Decision Tree model,
+"SVM" the function will build a Support vector machines model.
+This function will build the aforementioned model, train it on the training data, and return the model. Notice that "kNN" is not in the above list.
+
+1c) Create a function which takes 1 argument, the training data set. The function should perform 10-fold cross-validation on a kNN model, using the inputed training data. The function should build a final kNN model and return it.
+
+1d) Create a function which takes 2 arguments, a pre-trained model and the test data set. The function should print out the confusion matrix for the model, and the model accuracy, based on the test data.
+
+You should test the functionality of your functions, and your driver script below, on the following 2 data sets.
+
+The first is the 'seeds' data set, hosted at the UCI Machine Learning Repository: http://archive.ics.uci.edu/ml/datasets/seeds
+
+This data consists of measurements of 3 types of wheat seed. By default the data does not contain the column names. I've created a new version of the data which does contain the column names. It can be found here.
+
+The second data set is the 'cars' data set, which can be found here.
+
+This data set consists of multiple car models with its specifications.
+
+Note that you should use a single function to handle either data set.
+
+2) Create a driver script, called ClassificationDriver.R, that takes two mandatory command line arguments. The first argument should be the URL of the data set to be examined. The second should be the type of model to be used, either "DT", "KNN", or "SVM". When the script is called, the driver script should download the data in question, create the model in question, train it on the training data, and print out the confusion matrix generated from running the model on the test data.
+
+Please have your script print out statements describing what is happening: "Using data set ...", "Creating model ...".
+
+$ Rscript ClassificationDriver.R seeds_dataset2.txt DT
+Loading required package: ggplot2
+Loading required package: lattice
+Gathering data from seeds_dataset2.txt
+Building Decision Tree model.
+Confusion matrix:
+          Reference
+Prediction  1  2  3
+         1  8  0  6
+         2  0 14  0
+         3  0  0 14
+Accuracy: 0.8571429
+$
+$ Rscript ClassificationDriver.R cars_labeled.csv KNN
+Loading required package: ggplot2
+Loading required package: lattice
+Gathering data from cars_labeled.csv
+Confusion matrix:
+          Reference
+Prediction False True
+     False    10    2
+     True      2   10
+Accuracy: 0.8333333
+Submit your main driver script and utiltites file and the output of "git log" from your assignment repository.
+
+To capture the output of 'git log' use redirection, git log > git.log, and hand in the "git.log" file.
+
+Assignments will be graded on a 10 point basis.
+
+Due date is December 1, 2022 at midnight, with 0.5 point penalty per day for late submission until the cut-off date of December 8, 2022 at 9:00am.
+
