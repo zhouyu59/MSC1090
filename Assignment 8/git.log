@@ -1,0 +1,66 @@
+commit b61ba3c80ed06dafddf96a5e92f5a06b20e07d02
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Fri Nov 11 11:36:20 2022 -0500
+
+    finish the report for assignment 8
+
+commit 03b2f124a6364bfa66bde349ebeb8045de93f022
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Fri Nov 11 00:58:40 2022 -0500
+
+    add more code to make the output more clear
+
+commit 1640802359fd80dd5693d57720bdf0349a3ebaf1
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Fri Nov 11 00:54:45 2022 -0500
+
+    finish programming driver script
+
+commit c23e024ba20ed8e10ff9dd59a62c54534083ad77
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Fri Nov 11 00:45:10 2022 -0500
+
+    defensive programming for the driver script is written
+
+commit d09f9521fe52d118b5d022f5a67f243ae0c1ad8e
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Fri Nov 11 00:41:42 2022 -0500
+
+     comment Utilities.R and create driver script DriverScript.R
+
+commit 8e6333d96b78dbee7c9b4c20784da43601655562
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Fri Nov 11 00:30:52 2022 -0500
+
+    create a function called log.regression which perform logsitic regression on the data to classify low risk patient and high risk patient
+
+commit d814781aef1378747abf425ea7bb03ecbbb7ce73
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Nov 10 23:18:29 2022 -0500
+
+    code a function called decision.tree which builds a decision tree based on the data and predict whether the patient has a low risk of developing cancer
+
+commit d8367f6d88cd78885055215ee0202c8af0c7a25d
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Nov 10 22:24:50 2022 -0500
+
+    create a function called poly.regression which performs polynomial regression on the data to estimate the probability of getting cancer
+
+commit e8f831f1f43f89c317446618f6874b47a5cd6c8f
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Nov 10 13:10:22 2022 -0500
+
+    create a function called multiple.linear.regression that uses multiple linear regression to fit the data and output the results with graph:
+    ggplot, hist, residual plot
+
+commit f0376c264082c78c85543591ec82f64d234d0509
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Nov 10 11:53:56 2022 -0500
+
+    create a function called load.data to load the csv file
+
+commit cb1cd5c0b03b1fcf35893c90bae728338b5d28a0
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Nov 10 11:49:01 2022 -0500
+
+     create the data file and the utility file
