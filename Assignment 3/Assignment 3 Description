@@ -1,0 +1,66 @@
+Assignment 3
+Completion requirements
+Opened: Thursday, 29 September 2022, 10:00 AM
+Due: Thursday, 6 October 2022, 11:59 PM
+1) Create an R file named `myFuncs.R`, which contains definitions for the following two functions.
+
+1a) Write an R function, called geom.pos.mean, which takes 1 argument x, a vector of numeric values. The function should calculate and return the "geometric mean" of positive values in the vector x.
+
+The geometric mean determines the typical value of a set of numbers by using the product of their values (as opposed to the arithmetic mean which uses their sum). It is defined as the nth root of the product of n numbers numbers, i.e., for a set of numbers x1, x2, ..., xn, the geometric mean is defined as
+
+(∏𝑖=1𝑛𝑥𝑖)1𝑛=𝑥1𝑥2…𝑥𝑛‾‾‾‾‾‾‾‾‾‾√𝑛
+
+Your function geom.pos.mean should only work on positive numbers (not including zero). Any non-positive value in the input vector should to be ignored.
+
+There are native R functions prod() and length() that you may find useful; use help() to understand how to use them. You should also know that the caret ^ symbol is used to raise something to a power, as well as the double star **. That is, 2^3 == 2**3 = 8.
+
+1b) Write an R function, called neg.mean, which calculates and returns the usual arithmetic mean of a vector of numeric values, but only considers negative values (not including 0), and ignores positive values.
+
+1𝑛∑𝑖=1𝑛𝑥𝑖=(𝑥1+𝑥2+…+𝑥𝑛)/𝑛
+
+Find ways to use the techniques explained in class, such as 'slicing' (lecture 4, slide 9), which will make your code cleaner, more robust and efficient. No loops should be used for either of these two functions.
+
+The `source` command gives you access to the functions stored in a file. The source command reads and executes the whole file as if you were typing the lines at the R prompt. Use the source("myFuncs.R") command inside your R prompt (RGui if you have Windows) to check the output of your functions. Your functions should behave as follows:
+
+>
+> source("myFuncs.R")
+>
+> geom.pos.mean(-4:4)
+[1] 2.213364
+>
+> neg.mean(-4:4)
+[1] -2.5
+>
+    
+2) Write a function, called harmonicMean, which takes 1 argument, x, a vector of numeric values. The function should calculate and return the "harmonic mean" of x.
+
+The harmonic mean determines the typical value of a set of numbers by calculating the reciprocal of the average reciprocal value of the vector of values. Thus for n numbers, i.e. for a set of numbers x1, x2, ..., xn, the harmonic mean is defined as
+
+(1𝑛∑𝑖=1𝑛1𝑥𝑖)−1=11𝑛(1𝑥1+1𝑥2+…+1𝑥𝑛)
+
+As you might expect, if any of the values of x are zero, the harmonic mean is undefined. Your function, `harmonicMean`, should handle the existence of zeros in x. If any zero values are encountered in x, those values should be ignored and the harmonic mean calculated using the remaining values.
+
+Use the techniques explained in class, such as 'slicing', which will make your code cleaner, more robust and efficient. There are some native R functions you may find useful: sum(), and length(); use help() to understand how to use them. You should not need to use loops in your function.
+
+Your function should behave as follows:
+
+>
+> source("myFuncs.R")
+>
+> harmonicMean(1:10)
+[1] 3.414172
+>
+> harmonicMean(-3:5)
+[1] 17.77778
+>
+> harmonicMean(c(-2, 0, 0.5, 7, 0, 4, 4, -2))
+[1] 3.652174
+>
+    
+  
+Be sure to comment your code, indent your code blocks, and use meaningful variable names. You should not need to use loops in this assignment.
+
+Submit your script myFuncs.R.
+
+Assignments will be graded on 10 points basis.
+Due date is October 6, 2022 (midnight), with 0.5 point penalty per day for late submission until the cut-off date of October 13, 2022, at 9:00am.
