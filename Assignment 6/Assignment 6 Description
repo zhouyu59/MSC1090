@@ -1,0 +1,98 @@
+Assignment 6
+Completion requirements
+Opened: Thursday, 27 October 2022, 10:00 AM
+Due: Thursday, 3 November 2022, 11:59 PM
+Due date: November 3, 2022 at 11:59 pm.
+Be sure to use version control git, as you develop your script. Do git add and git commit repeatedly as you add to your script. You will hand in the output of git log for your assignment repository as part of the assignment.
+
+Data
+Consider the populations of the towns and cities in Canada, for the years 2017-2021, which we can find on Statistics Canada. I've cleaned up this data a little bit, removing the provincial totals, foreword and footnotes. The cleaned data can be found here. Download this data set and place it in your assignment directory.
+
+Problem
+Given the populations of the towns and cities of Canada, we'd like to explore the question of whether or not these populations follow Benford's Law. This unusual law, which shows up in all manner of different data, states that the frequency of the first digit of each of the data values follows the following probability distribution.
+
+𝑃(𝑑)=log10(𝑑+1𝑑)
+
+where d is the digit in question, 1-9.
+
+For answering the following questions, create an R script, named generateModels.R, that will receive two arguments from the Linux command line and, depending on the values, perform one of the actions mentioned in parts 1), 2) or 3) below. The script should be modular, as much as you think is necessary. For instance, at least each part in this assignment could be a function, such as loading the data, executing the fits, etc. Put your functions in an auxiliary file called Utilities.R.
+
+We also want you to implement defensive programming, so that if the first argument is not a 1, 2 or 3, the script sends a message to the screen letting the user know that only these options are possible, and then stops. Similarly, if the second argument is not one of the years 2017-2021 it should also give an error message and stop. It should also check to make sure that there are two, and only two, command line arguments given.
+
+0.1) Create a function which loads the data mentioned above, and then returns the data. Do not hard-code the name of the file into the function. You may hard-code the filename into your driver script.
+
+0.2) Create a function which takes the above data frame, and a year, as arguments. For the year in question, the function should calculate the frequency of each possible first digit, and return the digits and the frequencies in a data frame. You should appropriately clean the data before calculating the frequencies, and exclude any towns or cities that have a population of zero.
+
+> 
+> source("Utilities.R")
+>
+> my.data <- load.data('1710014201-eng.csv')
+> 
+> my.freqs <- build.digit.freqs(my.data, 2018)
+>
+> my.freqs
+  digits counts
+1      1   1421
+2      2    839
+3      3    583
+4      4    452
+5      5    423
+6      6    329
+7      7    278
+8      8    249
+9      9    242
+> 
+Your driver script should perform the following:
+
+If the command-line argument is 1 the script should:
+Load the data set, and perform the frequency analysis on the first digits of the population, using the year indicated by the second command-line argument.
+Implement a quadratic model to fit the first-digit frequencies, and provide details of the model (we will ignore the fact that the dependent variable is not continuous).
+Generate a graphical representation of the model in the presence of the original data.
+If the command-line argument is a 2 the script should:
+Load the data set, and perform the frequency analysis on the first digits of the population, using the year indicated by the second command-line argument.
+Implement a generalized linear model to fit to the first-digit frequency data, using a noise model and link function that you think is appropriate for the data, and provide details of the model.
+Generate a graphical representation of the model in the presence of the original data.
+If the command-line argument is a 3 the script should:
+Load the data set, and perform the frequency analysis on the first digits of the population, using the year indicated by the second command-line argument.
+Perform a chi-squared goodness-of-fit test on the data, to see if the data are statistically different from the distribution associated with Benford's law, given above. The function should return the output of the chi-squared test. The chisq.test function will be useful here. Note that the Null Hypothesis is that the data follows the supplied probabilities.
+If the p value of the test is less than 0.05 the script will print out something like "The null hypothesis that the data follow Benford's law is rejected, with a p value of ...". If the p value is greater than 0.05 the script will print out a similar, though opposite, sentence.
+Some notes to follow when implementing your script:
+
+Do not use global variables, i.e. pass arguments to the functions you created otherwise you will lose marks!
+You will notice when running the R script from the command line that the plots will not be shown, but instead will be saved in a file named Rplots.pdf in the same directory as the script is located. This is the default way in which R deals with plots when running in batch mode, and is acceptable for this assignment.
+Examples:
+
+$ Rscript generateModels.R 
+Error: This scripts requires two arguments: 1, 2 or 3, and a year between 2017 and 2021. 
+$ Rscript generateModels.R 0 
+Error: This scripts requires two arguments: 1, 2 or 3, and a year between 2017 and 2021.
+$ Rscript generateModels.R 1 2 
+Error: The year must be in the range 2017-2021. 
+$ Rscript generateModels.R 1 2017
+------------ 
+Fitting a quadratic model.
+
+Call:
+lm(formula = counts ~ poly(digits, 2), data = my.data)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-118.93  -71.59   16.87   72.37  142.34 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(>|t|)    
+(Intercept)        535.00      35.52  15.062  5.4e-06 ***
+poly(digits, 2)1  -938.29     106.56  -8.805 0.000119 ***
+poly(digits, 2)2   485.36     106.56   4.555 0.003872 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 106.6 on 6 degrees of freedom
+Multiple R-squared:  0.9425,	Adjusted R-squared:  0.9233 
+F-statistic: 49.14 on 2 and 6 DF,  p-value: 0.0001905
+--------------- 
+Submit your generateModels.R script file and Utilities.R file, and the output of git log from your assignment repository.
+
+To capture the output of git log use redirection, git log > git.log, and hand in the git.log file.
+
+Assignments will be graded on a 10 point basis. Due date is November 3rd, 2022 at 11:59pm, with 0.5 point penalty per day for late submission until the cut-off date of November 10, 2022 at 9:00am.
