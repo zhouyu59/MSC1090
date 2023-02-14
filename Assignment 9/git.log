@@ -1,0 +1,47 @@
+commit d4ced539eb839b073099e182e3799133833e848c
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Fri Nov 18 01:26:31 2022 -0500
+
+    add commen to plottingTools.R
+
+commit 535c1ad8dbd1a3a2241a6af72437584eb30b717d
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Fri Nov 18 01:17:55 2022 -0500
+
+    add comments to generatePlots.R
+
+commit b32f02e447611931c20d83d46d9126925debd155
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Fri Nov 18 01:13:53 2022 -0500
+
+    add more features to the plot to make them more pretty
+
+commit 73796d8e8a73f9e62e25c9f541002e6e4c0981de
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Fri Nov 18 00:57:25 2022 -0500
+
+    write scatter.plot which draws a scatter plot with a line of best fit for averageAge vs probability
+
+commit 4817155ac4c3b2265c5dcd2c876e1897bddd5431
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Nov 17 17:11:53 2022 -0500
+
+    create defensive programming for the command line argument
+
+commit 0d62fe61f0de41594da27c27b3312add02002917
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Nov 17 16:53:29 2022 -0500
+
+    create box.plot which can draw the box plots of probabilities in different averageAge, tobgp, and alcgp categories
+
+commit f8e516ce326214d08cdc1622b00b190873b47b68
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Nov 17 10:43:39 2022 -0500
+
+    create load.data function that read the csv file to load the data
+
+commit 0df4acb17af4c66a4b87fbb06905dbadc4ec6050
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Nov 17 10:41:36 2022 -0500
+
+    create the two script, generatePlots.R and plottingTools.R
