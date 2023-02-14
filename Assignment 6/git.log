@@ -1,0 +1,47 @@
+commit 34ec0e8ccc3f2433f6c0b3937f0b6a7159654714
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Fri Oct 28 00:29:21 2022 -0400
+
+    add if statements to perform different taks for different command line arguments. All codes are commented
+
+commit f318c28d388bbfafd289b75bf92d57272fd759aa
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Fri Oct 28 00:17:07 2022 -0400
+
+    create rscript generateModels.R and implement defensive programming
+
+commit a3ee266d0f2c14b001accb3a2d59bbbf0bf0519e
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Fri Oct 28 00:03:13 2022 -0400
+
+    create chisquared.fit function which performs chi-squared goodness-of-fit test on the data to see if the data are significantly different from the distribution associated with Benford's law
+
+commit 2d4202ca4463a21f8bc091f0a77400ee05ced695
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Oct 27 23:17:34 2022 -0400
+
+    create generalizedlm.fit function which implements generalized linear model to fit the data
+
+commit 6ea64374642dbb2f9a920424bef1796c5cdf5a3f
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Oct 27 20:55:09 2022 -0400
+
+    create quadratic.fit which implements quadratic model to fit the data
+
+commit 061d6c14c605371e7b83101bb00f68c34cd5f115
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Oct 27 19:56:10 2022 -0400
+
+    create build.digit.freqs which calculate frequncies of possible first digits and return the results in a data frame
+
+commit 0ca37914c49bc8ad361dbac25d60cad36e593eef
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Oct 27 18:17:35 2022 -0400
+
+    create a utility file and create a function that loads the data
+
+commit e3f2d923869d58f4cc7b77a4e21788808aed29f2
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Oct 27 18:07:36 2022 -0400
+
+    download population data
