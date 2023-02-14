@@ -1,0 +1,47 @@
+commit d4472b84295aed16d42ebb5a05025f52d4c49b97
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Nov 24 23:56:30 2022 -0500
+
+     complete ClassificationDriver.R script
+
+commit e2d2b041d177b6c945fea303cc87b18345565034
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Nov 24 23:43:43 2022 -0500
+
+    create ClassificationDriver.R which uses functions in ClassificationUtilities.R to create classification models
+
+commit f0b62a574ccb8b35037b96348d010ad26da0ca30
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Nov 24 23:40:56 2022 -0500
+
+    fix an issue with multiclass classification
+
+commit fac8ca1360fadbfc7de6a40f3e6c42760ae99795
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Nov 24 22:26:51 2022 -0500
+
+     create a function,model.test.performance, which takes a pre-trained model and test set to calculate the confusion matrix and accuracy
+
+commit 0a4d8d44d294315f5869ccca528d0bedaf27b8e9
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Nov 24 22:01:36 2022 -0500
+
+    create a function, kNN.cvmodel, which creates a kNN model on the training set
+
+commit 8446c6fa97fc19b44f1f93e3fa2784ec16d5dfd9
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Nov 24 21:43:28 2022 -0500
+
+    create a function, classification.model, which takes training data and model type as argument. The function will return the model of the training data for the given model type.
+
+commit 407b4225253e8c586ac21d4b46bb726fb163728f
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Nov 24 19:09:43 2022 -0500
+
+    create and comment utility function, loop.stratify.data, which reads a file or URL and load the data into a dataframe. Then the function will create a stratified split of the data
+
+commit 2e13db06814f9d68c1f31cecc2e289ecb382845c
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Nov 24 13:02:17 2022 -0500
+
+    create  ClassificationUtilities.R which contains all utility function
