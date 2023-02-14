@@ -1,0 +1,41 @@
+commit 60ce0c6843ed9351d2cb30a110e6dd38ab324e41
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Oct 6 12:50:23 2022 -0400
+
+    create a shell script processALLyear.sh which loops over all csv file in the directory calls the R script
+
+commit f93adafac496d5f0955943ce6c430ba83c3d9eef
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Oct 6 12:34:37 2022 -0400
+
+    determine the route with the most delays in February
+
+commit fafbd281b4dfc2e02b9ab8667cdd40031632b0b7
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Oct 6 12:18:20 2022 -0400
+
+    Fix some syntax errors in the R script
+
+commit 1bcbce905bcab07214811d3df6c6e1a1a9ba630b
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Oct 6 12:13:33 2022 -0400
+
+    calculate and print the average minimum delay ot streetcars due to mechanical incidents ignoring unreported data
+
+commit ffdab273959acd9e4bf5ee1dcbd13f5561206da7
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Oct 6 11:38:33 2022 -0400
+
+    calculate the total number of incident type and identify the types of incidents
+
+commit 280ce535ae91eb4874f5872169ea6382a34d83fd
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Oct 6 11:25:14 2022 -0400
+
+    read data from CSV file into a data frame
+
+commit 0efcf40ce320de78857c5297b2a67a7453a557d5
+Author: Yuchen Zhou <thomas.zhou@mail.utoronto.ca>
+Date:   Thu Oct 6 10:20:02 2022 -0400
+
+    Receive an argument from the command line
