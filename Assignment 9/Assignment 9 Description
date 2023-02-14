@@ -1,0 +1,40 @@
+Assignment 9
+Completion requirements
+Opened: Thursday, 17 November 2022, 10:00 AM
+Due: Thursday, 24 November 2022, 11:59 PM
+Be sure to use version control ("git"), as you develop your code. Do "git add ...., git commit" repeatedly as you add and edit your code. You will hand in the output of "git log" for your assignment repository as part of the assignment.
+
+In this assignment you will be creating two functions for creating professional-looking plots. Ideally you could use this approach for any figure you would need to produce for your papers, thesis, etc. For doing so, we would like to invite you to use a representative set from your own data. It doesn't need to be unpublished nor new data, just something that might resemble the actual data you have to deal with in your research. If you don't have any data available, you can still use other data that is close to your interests, either from the R data sets or from other websites, like Open Data Toronto, or the UCI Machine Learning Repository. If you are going to use one of the R data sets, do not use the ones we have been presenting and discussing in class. You may use the same data that you used in Assignment 8.
+
+If you need some inspiration we invite you to visit our "Visualization Gallery" which is entirely composed of outstanding submissions from students from previous years (maybe next year we could have your plots displayed here as well).
+
+Your script, named generatePlots.R, should receive two command line arguments. The first argument should be a file name that contains your data. If you use an R data set, dump the data to a file so that you have a file to load. Depending on the value of the second argument, the script will perform the following actions:
+
+if the command line argument is plot1, the script will generate a professional/publication quality plot, preferably using your own data, following the criteria and conventions discussed in class.
+if the command line argument is plot2, the script will generate a professional/publication quality plot of a different type, preferably using your own data, following the criteria and conventions discussed in class. You may use the same data as used in for the plot1 argument.
+Please make sure your plots follow the professional-plotting criteria outlined in class. You can use basic plotting tools available in R or ggplot2.
+
+The plots should contain more than one graphical representation, i.e. it can not be just dots representing the data; it should be something like the data points + a fit, i.e., at least two graphical representations, or additional statistical results, should be present! Please select an appropriate file type to save the plots generated in 1) and 2), such that it preserves the quality of your figure!
+
+Within your script, add comments to briefly describe what data or analysis are you using, and how you are plotting it.
+
+Additionally,
+
+you will have to create a git repository
+your script should have implemented defensive programming strategies for dealing with the command line arguments
+you will have to have at least two modules: a main driver script and a utilities file (named plottingTools.R) where the functions used for plotting purposes in the main driver will be defined
+the functions should have arguments for receiving information and return statements in the cases where you need to communicate further information to the rest of the code
+you must have one or more data-loading functions to load the data, either yours or whatever data you use
+no global variables of any kind, i.e. functions can not access variables that are not passed to them
+you can also use any of the functions you have been developing in previous assignments, in case you need to perform any statistical analysis in order to generate your plots.
+Please submit:
+
+your generatePlots.R script and plottingTools.R utilities file,
+the final products of your R script, i.e. two plot files,
+your data, so that when the script is run it will run successfully.
+The output of git log for this assignment.
+To capture the output of 'git log' use redirection, git log > git.log, and hand in the "git.log" file.
+
+Assignments will be graded on a 10 point basis.
+
+Due date is November 24, 2022 at midnight, with 0.5 point penalty per day for late submission until the cut-off date of December 1, 2022 at 9:00am.
